@@ -5,7 +5,7 @@
   apt_repository:
     repo: 'ppa:certbot/certbot'
 
-- name: Install Certbot for wanted web server
+- name: Install Certbot for {{ server_type }} web server
   apt: name={{ item }} state=latest update_cache=yes
   with_items:
-    - python-certbot-nginx
+    - python-certbot-{{ server_type }}
