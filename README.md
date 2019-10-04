@@ -11,7 +11,9 @@ None.
 Role Variables
 --------------
 
-None.
+Select we server type (apache or nginx).
+This is set as fact variable by hoplacloud.apache_php or hoplacloud.nginx_php
+server_type: "apache"
 
 Dependencies
 ------------
@@ -23,6 +25,7 @@ Example Playbook
 
     - hosts: localhost
       remote_user: root
+      server_type: "apache"
       roles:
          - hoplacloud.letsencrypt
 
