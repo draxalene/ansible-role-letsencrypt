@@ -4,6 +4,7 @@
 - name: Install Certbot (letsencrypt) PPA Repository
   apt_repository:
     repo: 'ppa:certbot/certbot'
+  when: "'bionic' in ansible_distribution_release"
 
 - name: Install Certbot for {{ server_type }} web server
   apt: name={{ item }} state=latest update_cache=yes
