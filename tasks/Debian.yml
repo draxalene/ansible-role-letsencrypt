@@ -10,3 +10,10 @@
   apt: name={{ item }} state=latest update_cache=yes
   with_items:
     - python-certbot-{{ server_type }}
+  when: "'bionic' in ansible_distribution_release"
+
+- name: Install Certbot for {{ server_type }} web server
+  apt: name={{ item }} state=latest update_cache=yes
+  with_items:
+    - python3-certbot-{{ server_type }}
+  when: "'focal' in ansible_distribution_release"
