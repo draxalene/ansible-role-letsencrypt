@@ -1,2 +1,4 @@
 ---
 # tasks file for hoplacloud.letsencrypt
+- name: No RedHat tasks
+  fail:
