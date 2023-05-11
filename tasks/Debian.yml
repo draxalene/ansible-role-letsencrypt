@@ -18,4 +18,4 @@
     name: python3-certbot-{{ server_type }}
     state: latest
     update_cache: yes
-  when: "'focal' in ansible_distribution_release"
+  when: ansible_distribution_release == 'focal' or ansible_distribution_release == 'jammy'
