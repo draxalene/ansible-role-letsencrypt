@@ -1,7 +1,7 @@
 galaxy_info:
   role_name: letsencrypt
-  author: hoplacloud
-  description: Hopla.cloud role for ansible to deploy Let's Encrypt certbot tool.
+  author: draxalene
+  description: draxalene role for ansible to deploy Let's Encrypt certbot tool. (by hopla.cloud)
   company: hopla.cloud
 
   license: GPLv3
@@ -17,5 +17,9 @@ galaxy_info:
     - web
     - letsencrypt
     - nginx
+    - linux
+    - apache
+    - draxalene
+    - hopla.cloud
 
 dependencies: []
